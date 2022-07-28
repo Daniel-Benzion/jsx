@@ -10,10 +10,9 @@ const root = ReactDOM.createRoot(el);
 
 // Create a component
 function App() {
-
-    let message = 'Bye there!';
-    if (Math.random() > 0.5) message = 'Hello there!'
-    return <h1>{message}</h1>;
+    const inputType = 'number';
+    const minValue = 5;
+    return <input type={inputType} min={minValue} style={{ border: '3px solid red' }}/>;
 }
 
 // Show the component on screen
