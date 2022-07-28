@@ -10,9 +10,7 @@ const root = ReactDOM.createRoot(el);
 
 // Create a component
 function App() {
-    const inputType = 'number';
-    const minValue = 5;
-    return <input type={inputType} min={minValue} style={{ border: '3px solid red' }}/>;
+    return <textarea autoFocus={true} />
 }
 
 // Show the component on screen
