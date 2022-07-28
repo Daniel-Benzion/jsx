@@ -1,17 +1,21 @@
+// Import React and React-DOM libraries
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM  from 'react-dom/client';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Get a reference to div with id = 'root'
+const el = document.getElementById('root');
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Tell React to take control of that element
+const root = ReactDOM.createRoot(el);
+
+// Create a component
+function App() {
+
+    let message = 'Bye there!';
+    if (Math.random() > 0.5) message = 'Hello there!'
+    return <h1>{message}</h1>;
+}
+
+// Show the component on screen
+root.render(<App />);
+
